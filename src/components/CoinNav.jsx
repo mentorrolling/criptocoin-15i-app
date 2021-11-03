@@ -2,16 +2,19 @@ import React from "react";
 import { Navbar, Container } from "react-bootstrap";
 import logo from "../assets/cripto-logo.png";
 
-const CoinNav = () => {
+const CoinNav = ({ actualizarData }) => {
   return (
     <Navbar bg="light" variant="light">
       <Container>
-        <Navbar.Brand className="d-flex align-items-center">
-          <img alt="logo" src={logo} className="img-logo" />
-          <span>
-            <b>CriptoCoin</b>
-          </span>
+        <Navbar.Brand>
+          <img alt="" src={logo} className="img-logo" />
+          CriptoCoin
         </Navbar.Brand>
+        <div>
+          <button className="btn btn-coin" onClick={actualizarData}>
+            Actualizar
+          </button>
+        </div>
       </Container>
     </Navbar>
   );
