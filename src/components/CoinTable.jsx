@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import numeral from "numeral";
 import CoinSymbol from "./CoinSymbol";
 
@@ -26,7 +28,12 @@ const CoinTable = ({ coins }) => {
             <td>{coin.rank}</td>
             <td className="d-flex ms-3">
               <CoinSymbol symbol={coin.symbol} />
-              {coin.name}
+              <Link
+                to={`/coin/${coin.id}`}
+                className="text-decoration-none text-dark"
+              >
+                {coin.name}
+              </Link>
             </td>
             <td>{numeral(coin.priceUsd).format("$0,0.00")}</td>
             <td>{numeral(coin.marketCapUsd).format("($ 0.00 a)")}</td>

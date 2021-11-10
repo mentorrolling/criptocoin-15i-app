@@ -9,6 +9,30 @@ const HomeScreen = () => {
     loading: true,
     update: true,
   });
+  // const tiempito;
+  // useEffect(() => {
+  //   traerData();
+  //  tiempito= setInterval(() => {
+  //     traerData();
+  //   }, 60000);
+  // }, []);
+
+  // useEffect(() => {
+
+  //   return () => {
+  //    clearInterval(tiempito)
+  //   }
+  // }, [])
+
+  // const traerData = () => {
+  //   getCoins().then((respuesta) => {
+  //     setCoins({
+  //       datos: respuesta,
+  //       loading: false,
+  //       update: false,
+  //     });
+  //   });
+  // };
 
   //Monta
   useEffect(() => {

@@ -39,3 +39,14 @@ body {
 .text-logo {
   text-align: left;
 }
+
+.card-login {
+  display: flex;
+  min-height: 500px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-login img {
+  width: 100px;
+}
