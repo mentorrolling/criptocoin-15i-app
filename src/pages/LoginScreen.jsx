@@ -17,7 +17,7 @@ const LoginScreen = () => {
     if (auth) {
       history.push("/");
     }
-  }, []);
+  }, [history]);
 
   const handleChange = (e) => {
     // console.log(e.target.value);

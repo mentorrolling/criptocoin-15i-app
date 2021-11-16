@@ -3,9 +3,11 @@ import { useParams } from "react-router-dom";
 
 import { getCoinId } from "../helpers/fetchCoins";
 
+import CoinCard from "../components/CoinCard";
+import CoinNav from "../components/CoinNav";
+
 const CoinScreen = () => {
   const { id } = useParams();
-  console.log(id);
 
   const [coin, setCoin] = useState({
     datos: {},
@@ -14,14 +16,27 @@ const CoinScreen = () => {
 
   useEffect(() => {
     getCoinId(id).then((respuesta) => {
-      console.log(respuesta);
+      setCoin({
+        datos: respuesta,
+        loading: false,
+      });
     });
-  }, []);
+  }, [id]);
 
   return (
-    <div>
-      <h1>Coin Screen</h1>
-    </div>
+    <>
+      <CoinNav />
+
+      <div className="container">
+        <div className="row coin-container">
+          <div className="col-12 col-md-8">
+            <div className="card mb-3">
+              {coin.loading ? <h3>Cargando...</h3> : <CoinCard coin={coin} />}
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
