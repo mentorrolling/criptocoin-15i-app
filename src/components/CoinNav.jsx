@@ -10,11 +10,14 @@ const CoinNav = ({ actualizarData }) => {
           <img alt="" src={logo} className="img-logo" />
           CriptoCoin
         </Navbar.Brand>
-        <div>
-          <button className="btn btn-coin" onClick={actualizarData}>
-            Actualizar
-          </button>
-        </div>
+
+        {actualizarData && (
+          <div>
+            <button className="btn btn-coin" onClick={actualizarData}>
+              Actualizar
+            </button>
+          </div>
+        )}
       </Container>
     </Navbar>
   );

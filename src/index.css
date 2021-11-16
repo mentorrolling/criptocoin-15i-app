@@ -50,3 +50,26 @@ body {
 .card-login img {
   width: 100px;
 }
+
+.coin-container {
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coin-container .div-rank {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
+  padding: 10px;
+  width: 80px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/*Para imagen de la card de coin id*/
+.coin-img img {
+  width: 50%;
+}
