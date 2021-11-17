@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CoinNav from "../components/CoinNav";
+import CoinSearch from "../components/CoinSearch";
 import CoinTable from "../components/CoinTable";
 import { getCoins } from "../helpers/fetchCoins";
 
@@ -69,6 +70,8 @@ const HomeScreen = () => {
      tabla 
      --------------------
      */}
+
+      <CoinSearch coins={coins} setCoins={setCoins} />
 
       {/* {coins.loading && <h3 className="text-white text-center">Cargando...</h3>} */}
       <div className="container mt-5">
